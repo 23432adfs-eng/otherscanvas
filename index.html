@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Shohag Mia — Master Portfolio 2026</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="logo-area">
+            <h1 contenteditable="true" class="editable-text clickable">MD SHOHAG MIA</h1>
+            <p contenteditable="true" class="editable-text clickable">PORTFOLIO ISSUE 01 • 2026</p>
+        </div>
+        <nav class="nav-links">
+            <a href="#work" class="clickable">WORK</a>
+            <a href="#services" class="clickable">SERVICES</a>
+            <a href="#about" class="clickable">ABOUT</a>
+            <a href="#contact" class="clickable">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <span class="badge clickable" contenteditable="true">OPEN TO INTERNATIONAL PROJECTS</span>
+            <h2 contenteditable="true" class="clickable">Brand identities & professional designs that help businesses grow.</h2>
+            <p class="role-title clickable" contenteditable="true">GRAPHIC DESIGNER, BRAND IDENTITY & MULTIMEDIA EXPERT</p>
+            <p class="hero-desc clickable" contenteditable="true">I'm MD Shohag Mia. With 2.5+ years of professional experience, I specialize in comprehensive visual branding, print design, social media campaigns, and creative digital solutions.</p>
+            <a href="#work" class="view-work-btn clickable">VIEW SELECTED WORK ↓</a>
+        </div>
+        <div class="hero-image-box animate-box">
+            <img src="photo.jpg" alt="MD Shohag Mia" class="hero-logo-img" id="hero-preview" onerror="this.src='images/logo-branding/jpg1 (1).jpg';">
+            <div class="card-edit-overlay">
+                <label for="hero-file-input" class="edit-icon-btn clickable" title="Upload Hero Image">✏️ Change Photo</label>
+                <input type="file" id="hero-file-input" class="hidden-file-input" accept="image/*" onchange="updateHeroImage(event)">
+            </div>
+            <p class="fig-caption">Fig. 01: Professional Brand Identity Showcase</p>
+        </div>
+    </section>
+
+    <!-- Selected Work Section (Smooth Right-to-Left Slide Animation) -->
+    <section id="work" class="selected-work">
+        <div class="section-header">
+            <h3>Selected work (Published Portfolio)</h3>
+            <span>UNLIMITED FILE CAPACITY & SLIDE ANIMATION</span>
+            <button class="add-card-btn clickable" onclick="addNewProjectBox()">+ Add New Category</button>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+            
+            <!-- 1. Logo Branding -->
+            <div class="project-card animate-card">
+                <div class="project-img-container hover-gallery">
+                    <img src="images/logo-branding/jpg1 (1).jpg" alt="Logo 1" class="gallery-img active-img">
+                    <img src="images/logo-branding/jpg1 (2).jpg" alt="Logo 2" class="gallery-img">
+                    <div class="hover-hint">👉 HOVER TO SLIDE DESIGNS (RIGHT TO LEFT)</div>
+                    <div class="box-action-bar">
+                        <label class="action-icon clickable" title="Upload Files">➕<input type="file" multiple accept="image/*" onchange="uploadBoxImages(this)"></label>
+                        <button class="action-icon remove-icon clickable" title="Remove Image" onclick="deleteActiveImage(this)">✕</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="p-no">No. 01</span>
+                    <span class="p-cat clickable" contenteditable="true">LOGO BRANDING</span>
+                    <h4 class="clickable" contenteditable="true">Savana & Premium Brand Identity</h4>
+                    <p class="clickable" contenteditable="true">Complete professional branding system created with high-end corporate elegance.</p>
+                </div>
+            </div>
+
+            <!-- 2. Business Card Design -->
+            <div class="project-card animate-card">
+                <div class="project-img-container hover-gallery">
+                    <img src="images/business-card/jpg1 (1).jpg" alt="Card 1" class="gallery-img active-img">
+                    <img src="images/business-card/jpg1 (2).jpg" alt="Card 2" class="gallery-img">
+                    <div class="hover-hint">👉 HOVER TO SLIDE DESIGNS (RIGHT TO LEFT)</div>
+                    <div class="box-action-bar">
+                        <label class="action-icon clickable" title="Upload Files">➕<input type="file" multiple accept="image/*" onchange="uploadBoxImages(this)"></label>
+                        <button class="action-icon remove-icon clickable" title="Remove Image" onclick="deleteActiveImage(this)">✕</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="p-no">No. 02</span>
+                    <span class="p-cat clickable" contenteditable="true">PRINT & STATIONERY</span>
+                    <h4 class="clickable" contenteditable="true">Business Card Design Collections</h4>
+                    <p class="clickable" contenteditable="true">Sleek, high-end, and professional corporate stationery that leaves a lasting impression.</p>
+                </div>
+            </div>
+
+            <!-- 3. Social Media Post Design -->
+            <div class="project-card animate-card">
+                <div class="project-img-container hover-gallery">
+                    <img src="images/social-media/jpg1 (1).jpg" alt="Social 1" class="gallery-img active-img">
+                    <img src="images/social-media/jpg1 (2).jpg" alt="Social 2" class="gallery-img">
+                    <img src="images/social-media/jpg1 (3).jpg" alt="Social 3" class="gallery-img">
+                    <div class="hover-hint">👉 HOVER TO SLIDE DESIGNS (RIGHT TO LEFT)</div>
+                    <div class="box-action-bar">
+                        <label class="action-icon clickable" title="Upload Files">➕<input type="file" multiple accept="image/*" onchange="uploadBoxImages(this)"></label>
+                        <button class="action-icon remove-icon clickable" title="Remove Image" onclick="deleteActiveImage(this)">✕</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="p-no">No. 03</span>
+                    <span class="p-cat clickable" contenteditable="true">DIGITAL MARKETING</span>
+                    <h4 class="clickable" contenteditable="true">Social Media Post & Banner Design (18+ items)</h4>
+                    <p class="clickable" contenteditable="true">Engaging ad banners, promotional creatives, and social grids designed to convert audiences.</p>
+                </div>
+            </div>
+
+            <!-- 4. Print & Packaging Design -->
+            <div class="project-card animate-card">
+                <div class="project-img-container hover-gallery">
+                    <img src="images/print-design/jpg1 (1).jpg" alt="Print 1" class="gallery-img active-img" onerror="this.src='images/print-design/jpg1 (1).jpeg';">
+                    <img src="images/print-design/jpg1 (2).jpg" alt="Print 2" class="gallery-img">
+                    <div class="hover-hint">👉 HOVER TO SLIDE DESIGNS (RIGHT TO LEFT)</div>
+                    <div class="box-action-bar">
+                        <label class="action-icon clickable" title="Upload Files">➕<input type="file" multiple accept="image/*" onchange="uploadBoxImages(this)"></label>
+                        <button class="action-icon remove-icon clickable" title="Remove Image" onclick="deleteActiveImage(this)">✕</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="p-no">No. 04</span>
+                    <span class="p-cat clickable" contenteditable="true">PRINT & PACKAGING</span>
+                    <h4 class="clickable" contenteditable="true">Print, Packaging, Brochure & Menu Design</h4>
+                    <p class="clickable" contenteditable="true">Creative product packaging, custom box designs, professional flyers, brochures, and menu cards.</p>
+                </div>
+            </div>
+
+            <!-- 5. Thumbnail & Video Editing -->
+            <div class="project-card animate-card">
+                <div class="project-img-container hover-gallery">
+                    <img src="images/thumbnail/jpg1 (1).jpg" alt="Thumb 1" class="gallery-img active-img">
+                    <img src="images/thumbnail/jpg1 (2).jpg" alt="Thumb 2" class="gallery-img">
+                    <div class="hover-hint">👉 HOVER TO SLIDE DESIGNS (RIGHT TO LEFT)</div>
+                    <div class="box-action-bar">
+                        <label class="action-icon clickable" title="Upload Files">➕<input type="file" multiple accept="image/*" onchange="uploadBoxImages(this)"></label>
+                        <button class="action-icon remove-icon clickable" title="Remove Image" onclick="deleteActiveImage(this)">✕</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="p-no">No. 05</span>
+                    <span class="p-cat clickable" contenteditable="true">CONTENT CREATION</span>
+                    <h4 class="clickable" contenteditable="true">High-CTR Thumbnail & Video Editing</h4>
+                    <p class="clickable" contenteditable="true">High-converting YouTube thumbnails and futureproof video editing assets.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h3>WHAT I DO</h3>
+        <h2>Services</h2>
+        <div class="services-list">
+            <div class="service-item">
+                <span>01</span>
+                <div>
+                    <h4 class="clickable" contenteditable="true">Logo Design & Brand Identity</h4>
+                    <p class="clickable" contenteditable="true">Complete brand guidelines, logomarks and systems built to last.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <span>02</span>
+                <div>
+                    <h4 class="clickable" contenteditable="true">Social Media & Ad Design</h4>
+                    <p class="clickable" contenteditable="true">Engaging posts, promotional banners and high-converting ad creatives.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <span>03</span>
+                <div>
+                    <h4 class="clickable" contenteditable="true">Print, Brochure & Packaging</h4>
+                    <p class="clickable" contenteditable="true">Business cards, flyers, custom packaging boxes, brochures and menus.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <span>04</span>
+                <div>
+                    <h4 class="clickable" contenteditable="true">Thumbnail & Video Editing</h4>
+                    <p class="clickable" contenteditable="true">High-CTR thumbnails and professional video editing workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-text">
+            <h3>ABOUT ME</h3>
+            <p class="about-highlight clickable" contenteditable="true">I have 2.5+ years of professional experience working with over 50+ companies globally.</p>
+            <p class="clickable" contenteditable="true">As a versatile graphic designer and brand identity specialist, I help businesses elevate their visual presence across print, digital, and multimedia platforms.</p>
+            <a href="https://www.behance.net/mdshohagmia10" target="_blank" class="more-about clickable">BEHANCE PORTFOLIO →</a>
+        </div>
+        <div class="about-image">
+            <div class="portrait-box">
+                <img src="photo.jpg" alt="MD Shohag Mia" class="my-profile-img" id="about-preview" onerror="this.src='images/logo-branding/jpg1 (1).jpg';">
+                <div class="card-edit-overlay">
+                    <label for="about-file-input" class="edit-icon-btn clickable" title="Upload Profile Photo">✏️ Upload Photo</label>
+                    <input type="file" id="about-file-input" class="hidden-file-input" accept="image/*" onchange="updateAboutImage(event)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer Section -->
+    <footer id="contact" class="site-footer">
+        <h2>Let's work together.</h2>
+        <a href="mailto:23a432adfs@gmail.com" class="email-link clickable">📧 23a432adfs@gmail.com</a>
+        <div class="footer-bottom">
+            <p>© 2026 MD Shohag Mia</p>
+            <div class="social-links">
+                <a href="https://www.behance.net/mdshohagmia10" target="_blank" class="clickable">Behance</a>
+                <a href="https://www.facebook.com/profile.php?id=61595879236278" target="_blank" class="clickable">Facebook</a>
+                <a href="https://www.instagram.com/mia456912/" target="_blank" class="clickable">Instagram</a>
+                <a href="https://x.com/mdShohagmi36760" target="_blank" class="clickable">Twitter</a>
+                <a href="https://www.linkedin.com/in/md-shohagmia-27235a327/" target="_blank" class="clickable">LinkedIn</a>
+                <a href="https://wa.me/8801600725134" target="_blank" class="clickable">WhatsApp (01600725134)</a>
+            </div>
+        </div>
+        <p class="designer-sub">Graphic Designer & Brand Identity Designer</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function updateHeroImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) { document.getElementById('hero-preview').src = e.target.result; }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function updateAboutImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) { document.getElementById('about-preview').src = e.target.result; }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function uploadBoxImages(input) {
+            const container = input.closest('.project-img-container');
+            const files = input.files;
+            if (files && files.length > 0) {
+                const hint = container.querySelector('.hover-hint');
+                if (hint) hint.remove();
+
+                for (let i = 0; i < files.length; i++) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.className = 'gallery-img';
+                        if (container.querySelectorAll('.gallery-img').length === 0) {
+                            img.classList.add('active-img');
+                        }
+                        container.insertBefore(img, container.querySelector('.box-action-bar'));
+                    }
+                    reader.readAsDataURL(files[i]);
+                }
+                alert(files.length + " file(s) uploaded successfully! Hover to see smooth slide animation.");
+            }
+        }
+
+        function deleteActiveImage(btn) {
+            const container = btn.closest('.project-img-container');
+            const images = container.querySelectorAll('.gallery-img');
+            if (images.length > 0) {
+                let targetImg = container.querySelector('.gallery-img.active-img') || images[0];
+                targetImg.remove();
+                
+                const remaining = container.querySelectorAll('.gallery-img');
+                if (remaining.length > 0) {
+                    remaining[0].classList.add('active-img');
+                }
+                alert("Image removed successfully!");
+            } else {
+                alert("No images available to remove.");
+            }
+        }
+
+        function addNewProjectBox() {
+            const container = document.getElementById('projects-container');
+            const count = container.children.length + 1;
+            const newCard = document.createElement('div');
+            newCard.className = 'project-card animate-card';
+            newCard.innerHTML = `
+                <div class="project-img-container hover-gallery">
+                    <div class="hover-hint">👉 HOVER TO SLIDE DESIGNS</div>
+                    <div class="box-action-bar">
+                        <label class="action-icon clickable" title="Upload Files">➕<input type="file" multiple accept="image/*" onchange="uploadBoxImages(this)"></label>
+                        <button class="action-icon remove-icon clickable" title="Remove Image" onclick="deleteActiveImage(this)">✕</button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="p-no">No. 0${count}</span>
+                    <span class="p-cat clickable" contenteditable="true">NEW CATEGORY</span>
+                    <h4 class="clickable" contenteditable="true">New Design Project</h4>
+                    <p class="clickable" contenteditable="true">Add your description here.</p>
+                </div>
+            `;
+            container.appendChild(newCard);
+            alert("New portfolio category box created!");
+        }
+    </script>
+</body>
+</html>
